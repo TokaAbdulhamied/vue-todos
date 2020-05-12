@@ -1,9 +1,12 @@
 <template>
   <li class="d-flex align-items-center list-group-item ">
-
-        <input class="checkmark" type="checkbox" v-model="todo.completed" >
-      <span class="border-0 flex-grow-1" v-if="!isEditing" 
-      :class="{ mark_completed: todo.completed }">{{ this.todo.description }}</span>
+    <input class="checkmark" type="checkbox" v-model="todo.completed" />
+    <span
+      class="border-0 flex-grow-1"
+      v-if="!isEditing"
+      :class="{ mark_completed: todo.completed }"
+      >{{ this.todo.description }}</span
+    >
 
     <form v-else class="flex-grow-1" @submit.prevent="finishEditing()">
       <input
@@ -69,7 +72,7 @@ export default {
 span {
   margin-left: 30px;
 }
-.checkmark{
+.checkmark {
   height: 18px;
   width: 18px;
 }
