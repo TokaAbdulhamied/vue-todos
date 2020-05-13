@@ -1,8 +1,8 @@
 <template>
-  <div class="container">
-    <div class="row mb-3 ">
+  <div class="container ">
+    <div class="row mb-3 col-12  ">
       <form
-        class="col-12 col-sm-10 col-md-8 cl-lg-6"
+        class="col-12 col-sm-10 col-md-7 cl-lg-7 mx-auto   "
         @submit.prevent="addTodo()"
       >
         <input
@@ -13,8 +13,8 @@
         />
       </form>
     </div>
-    <div class="row">
-      <div class="col-12 col-sm-10 col-lg-6  ">
+    <div class="row mb-3 col-12">
+      <div class="col-12 col-sm-10 col-lg-7 mx-auto">
         <ul class="list-group">
           <todo
             v-for="(todo ) in todosFiltered"

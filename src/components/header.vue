@@ -23,18 +23,19 @@ export default {
     background: #333;
     color: #fff;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 10px;
    
   }
-  
+
 #nav {
   padding: 5px;
 
   a {
-    font-weight: bold;
     color:lightgoldenrodyellow;
     text-decoration: none;
+    font-size: 1.3em;
+    margin-right: 10px;
 
     &.router-link-exact-active {
       color: #42b985;

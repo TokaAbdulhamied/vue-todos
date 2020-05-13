@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home ">
     <TodoList status="all" />
   </div>
 </template>
@@ -14,3 +14,4 @@ export default {
   }
 };
 </script>
+
