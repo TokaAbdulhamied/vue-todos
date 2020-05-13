@@ -19,6 +19,7 @@ yarn build
 ```
 yarn lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## to run the project 
+```
+npm run serve : local host http://localhost:8080/
+```
