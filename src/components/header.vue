@@ -4,7 +4,8 @@
         <h3>To Do List</h3>
         <div id="nav">
         <router-link to="/">Todos</router-link> |
-        <router-link to="/about">Done Todos</router-link>
+        <router-link to="/todos">Todo</router-link> |
+        <router-link to="/completed">Done Todos</router-link>
         </div>
       </div>
   </header>
@@ -33,11 +34,11 @@ export default {
 
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color:lightgoldenrodyellow;
     text-decoration: none;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: #42b985;
     }
   }
 }

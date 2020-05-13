@@ -17,7 +17,7 @@
       <div class="col-12 col-sm-10 col-lg-6  ">
         <ul class="list-group">
           <todo
-            v-for="(todo, index) in todos"
+            v-for="(todo, index) in todosFiltered"
             :key="index"
             :todo="todo"
             @toggle="toggleTodo(todo)"
@@ -26,11 +26,6 @@
             @on-change="saveTodo()"
           />
         </ul>
-        <div>
-          <button :class="{ active: filter == 'all' }" @click="filter = 'all'">All</button>
-          <button :class="{ active: filter == 'active' }" @click="filter = 'active'">Active</button>
-          <button :class="{ active: filter == 'completed' }" @click="filter = 'completed'">Completed</button>
-      </div>
       </div>
     </div>
   </div>
@@ -41,12 +36,12 @@ import Todo from "../components/Todo";
 
 export default {
   props: {
-    listName: String
+    status: String
   },
   data() {
     return {
       newTodo: "",
-      filter :'all',
+      filter:this.status,
       todos: [
                 {  description: "Do the dishes", completed: false },
         {  description: "Take out the trash", completed: true },
@@ -64,7 +59,7 @@ export default {
     }
   },
   computed:{
-        todosFiltered () {
+      todosFiltered() {
       if (this.filter == 'all') {
         return this.todos
       } else if (this.filter == 'active') {
@@ -73,8 +68,8 @@ export default {
         return this.todos.filter(todo => todo.completed)
       }
       return this.todos
-    }
-  },
+  }
+    },
   methods: {
     addTodo() {
       if (this.newTodo.length > 0) {
