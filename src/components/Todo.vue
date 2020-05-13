@@ -1,6 +1,7 @@
 <template>
   <li class="d-flex align-items-center list-group-item ">
-    <input class="checkmark" type="checkbox" v-model="todo.completed" />
+    <input class="checkmark" type="checkbox" v-model="todo.completed" 
+    @change="$emit('on-change')" />
     <span
       class="border-0 flex-grow-1"
       v-if="!isEditing"
@@ -24,7 +25,7 @@
       <span class="fa fa-edit"></span>
     </button>
     <button
-      @click="$emit('on-delete', todo.id)"
+      @click="$emit('on-delete')"
       class="btn btn-outline-danger border-0"
     >
       <span class="fa fa-trash"></span>
