@@ -44,7 +44,7 @@ export default {
   data() {
     return {
       isEditing: false,
-      newTodoDescription: ""
+      newTodoDescription: "", 
     };
   },
 

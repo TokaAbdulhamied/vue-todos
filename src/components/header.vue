@@ -3,8 +3,8 @@
       <div class=" header">
         <h3>To Do List</h3>
         <div id="nav">
-        <router-link to="/">Todos</router-link> |
-        <router-link to="/todos">Todo</router-link> |
+        <router-link to="/">All</router-link> |
+        <router-link to="/todos">Todos</router-link> |
         <router-link to="/completed">Done Todos</router-link>
         </div>
       </div>
@@ -27,8 +27,7 @@ export default {
     padding: 10px;
    
   }
-
-
+  
 #nav {
   padding: 5px;
 

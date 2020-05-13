@@ -1,12 +1,12 @@
 <template>
   <div class="home">
-    <TodoList status="all"/>
+    <TodoList status="all" />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-  import TodoList from "../components/TodoList"
+import TodoList from "../components/TodoList";
 export default {
   name: "Home",
   components: {
